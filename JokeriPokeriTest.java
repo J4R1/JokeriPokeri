@@ -23,7 +23,6 @@ public class JokeriPokeriTest {
             for (int iIndexArvo = 1; iIndexArvo <= 13; iIndexArvo++) {
                 //Luodaan 52 peruskortti oliota suoraan korttipakka arrayhin
                 kortitPakka.add(iKorttiIndex, new Kortti(iKorttiIndex, iIndexArvo, iIndexMaat, false));
-                //kortitPakka[iKorttiIndex] = new Kortti(iKorttiIndex, iIndexArvo, iIndexMaat, false);
                 iKorttiIndex++;
             }
         }

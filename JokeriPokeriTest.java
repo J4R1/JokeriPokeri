@@ -14,7 +14,6 @@ public class JokeriPokeriTest {
         //Kortti[] kortitMuu = new Kortti[0];
         
         int iKorttiIndex = 0;
-        Kortti tempKortti;
         
         //Luo kortti oliot pakka arrayhin
         //For kortin maat (1-4)

@@ -10,12 +10,16 @@ public class JokeriPokeri {
         //Valinnainen: Ruutu jossa näppäimiä voisi painaa
         
         //Muuttujat
-            //Käsikortit voi mahdollisesti säilyttää yksiulotteisessa int arrayssa
+            //Kortti array
+                //Kortti korttiPakka[] = new Kortti[53]
+                //Kortti korttiKasi[] = new Kortti[0]
+                //Kortti korttiMuu[] = new Kortti[0]
+            //Säilytä kädessä array
+                //Boolean bSailytaKadessa[] = new Boolean[5]
         
         //Luodaan kortti oliot (53 kpl)
             //For kortinmaat (1-4)
                 //For (1-13)
-                    //Iffaukset kortin nimelle (A, J, Q, K)
             //Jokeri
                 //Jokeria tarkistaessa bJokeri = true, ja erikoiskäsittely
         //Luodaan lompakko jossa on rahaa
@@ -25,7 +29,7 @@ public class JokeriPokeri {
         
         //Syötetään rahaa pelikoneeseen
             //Leikitään että lompakko on täynnä 0,20 kolikoita
-                //Valinnainen: Kolikoita on joko 0.20, 0.50 tai 1.0 kolikoina
+                //Valinnainen: Kolikoita on 0.20, 0.50 ja 1.0 kolikoina
                     //Kolikoita lisätään koneeseen yksi kerrallaan
                     //Johtaa siihen että rahojen loppuessa erikoiskäytäntö jos 0.10 rahamäärä
                         //Pakko yrittää tuplata [TUPLAUS]
@@ -38,7 +42,7 @@ public class JokeriPokeri {
             
         //Käyttäjä painaa [JAKO] painiketta
             //Jaa viisi korttia
-                //Kutsu nosta kortti funktiota viisi kertaa
+                //Kutsu nosta kortti funktiota viisi kertaa (tai kunnes käsi on täynnä)
                 //Nostetut kortit voisi säilöä arrayhin
                 //Jakamiseen olisi hyvä olla visuaalinen käsi
                 //Kortit olisi hyvä jakaa pienellä viiveellä jännityksen ylläpitämistä varten (Sleep komento)
@@ -107,7 +111,7 @@ public class JokeriPokeri {
                     //1-4
                     //Kortin maan voi hakea omalla funktiolla
                         //esim. 1 = hertta, 2 = ruutu, 3 = pata, 4 = risti
-                    //Värin voi hkaea omalla funktiolla
+                    //Värin voi hakaea omalla funktiolla
                         //esim. 1-2 = punainen, 3-4 = musta
                 //Sijainti
                     //esim. 1 = pakka, 2 = käsi, 3 = muu
@@ -135,7 +139,6 @@ public class JokeriPokeri {
                     //Kolmoset      2x
                     //Kaksi paria   2x
                     //Ei voittoa    0x
-            
             //Tuplaaminen
                 //Kysy pelaajalta valinta [PIENI]/[SUURI]
                     //Pieni (1-6)
@@ -155,7 +158,6 @@ public class JokeriPokeri {
             
             //Valinnaiset ominaisuudet:
                 //Pelin pystyisi hoitaa myös täysin tekstinä, mutta visuaalinen peli olisi hienompi
-                
                 //Peliruutu luokka
                     //Avautuva ikkuna jossa peli näkyy
                         //Peliruutuun voisi piirtää kuvat kuten kortit ja painikkeet
@@ -167,9 +169,21 @@ public class JokeriPokeri {
                     
             //Työtehtävät:
                 //Perus runko
+                    //Pseudokoodin täydentäminen oikealla koodilla
                 //Olioiden rakentaminen
-                //Kortin nosto funktio
-                //Voiton tarkistus funktiot
+                    //Lompakko
+                    //Pelikone
+                    //Kortti
+                        //Jokerin käsittelyn miettiminen
+                //Kortinnosto funktio
+                //Voitontarkistus funktiot
+                    //Iffaukset voitoille
+                    //Funktiot voitoille jotka palauttavat true/false
                 //Tuplaus funktio
+                    //Tässä voidaan hyödyntää kortinnosto funktiota
+            //Valinnaiset työtehtävät:
+                //Board luokka (peliruutu)
+                //Kuvat
+                //Kuvan piirtämis koodit
     }
 }

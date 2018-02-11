@@ -39,25 +39,18 @@ public class KorttiKasittely {
     
     //Korttien siirtäminen muuhun kasaan
         //Ottaa vastaan käsi arrayn ja muu arrayn
-        //Ota vastaan säilytettävien korttien array
-        //Vie valitut kortit muu arrayhin ja poista kortit käsi arraysta
+        //Vie kortti muu arrayhin ja poista kortti käsi arraysta
     
     //Korttien sekoitus takaisin pakkaan
-    //Ota vastaan kaikki kolme kortti arrayta
-    //Looppaa kaikki kortit käsi ja muu korteista ja siirrä ne pakkaan
-    public static void SiirraKortitPakkaan(ArrayList<Kortti> kortitPakka, ArrayList<Kortti> kortitKasi, ArrayList<Kortti> kortitMuu) {
+    //Ota vastaan pakka array ja toinen array jonka kortit halutaan siirtää
+    //Looppaa kaikki kortit ja siirrä ne pakkaan
+    public static void SiirraKortitPakkaan(ArrayList<Kortti> kortitPakka, ArrayList<Kortti> kortitJotkaSiirretaan) {
         //Sekoitetaan kortit takaisin pakkaan
-        while (kortitKasi.size() > 0) {
+        while (kortitJotkaSiirretaan.size() > 0) {
             //Siirrä nostettu kortti käsikortteihin
-            kortitPakka.add(kortitKasi.get(0));
+            kortitPakka.add(kortitJotkaSiirretaan.get(0));
             //Poista kortti pakasta
-            kortitKasi.remove(0);
-        }
-        while (kortitMuu.size() > 0) {
-            //Siirrä nostettu kortti käsikortteihin
-            kortitPakka.add(kortitMuu.get(0));
-            //Poista kortti pakasta
-            kortitMuu.remove(0);
+            kortitJotkaSiirretaan.remove(0);
         }
     }
     

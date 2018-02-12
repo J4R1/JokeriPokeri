@@ -28,7 +28,7 @@ public class Voitontarkistus {
         //Jokeri kortti on asetettu nollakortiksi
             //Kortti.dArvo = 0;
             //Kortti.dMaa = 0;
-            //Kortti.bOnkoJokeri = true; Tämä on tarpeeton? Nollastahan sen näkisi
+            //Kortti.bJokeri = true; Onko tämä tarpeellinen? Nollastahan Jokerin tunnistaa
         
         //Voittojen selvitykseen olisi ehkä helpointa siirtää käsikortit kasvavaan järjestykseen
             //Varmaan kannattaisi tehdä kopio käsikorteista uuteen kortti arrayhin (tai ihan long array!)

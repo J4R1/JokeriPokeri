@@ -22,13 +22,24 @@ public class Voitontarkistus {
         //boolean suora, vari, tayskasi, kolmoset, neloset, viitoset;
         //int pari;
         
+        //Korttipakan looppaus
+        //for (Kortti kortti : kortitPakka) {
+        
+        //Jokeri kortti on asetettu nollakortiksi
+            //Kortti.dArvo = 0;
+            //Kortti.dMaa = 0;
+            //Kortti.bOnkoJokeri = true; Tämä on tarpeeton? Nollastahan sen näkisi
+        
         //Voittojen selvitykseen olisi ehkä helpointa siirtää käsikortit kasvavaan järjestykseen
-            //Varmaan kannattaisi tehdä kopio käsikorteista uuteen kortti arrayhin
+            //Varmaan kannattaisi tehdä kopio käsikorteista uuteen kortti arrayhin (tai ihan long array!)
             //tällöin käsikorttien järjestys ei muutu
         
         //Esim. Selvitä kaikki booleanit ja parien määrät ja lopuksi valitse arvokkain voitto
         
-        //Aseta bSailytaKortit arrayhin säilytettävät kortit
+        //Aseta bSailytaKortit arrayhin säilytettävät kortit 
+            //En tiedä onko pakollista!!!
+            //Sitten kun Jari selvittää peli ikkunan niin ton kortin säilytyksen
+            //voi suoraan ruksata kortin checkboxiin
         
     }
     

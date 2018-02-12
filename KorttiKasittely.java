@@ -25,6 +25,7 @@ public class KorttiKasittely {
     
     //Kortin nosto funktio
     //Ota vastaan pakka array ja käsi array
+    //Lisää satunnainen kortti pakasta käteen
     public static void NostaKortti(ArrayList<Kortti> kortitPakka, ArrayList<Kortti> kortitKasi) {
         int iNostettavaKortti;
         //Valitaan pakasta satunnainen indeksi
@@ -33,6 +34,11 @@ public class KorttiKasittely {
         System.out.println("Nostit kortin " + kortitPakka.get(iNostettavaKortti));
         //Siirrä nostettu kortti käsikortteihin
         kortitKasi.add(kortitPakka.get(iNostettavaKortti));
+        
+        //Kutsu funktiota joka piirtää kortin peliruutuun
+        //esim. Texture class jossa on metodi joka ottaa vastaan kortin indexin (1-5) ja Kortti objektin
+        //Texture.PiirraKortti(kortitKasi.size(), kortitPakka.get(iNostettavaKortti));
+        
         //Poista kortti pakasta
         kortitPakka.remove(iNostettavaKortti);
     }
@@ -44,13 +50,13 @@ public class KorttiKasittely {
     //Korttien sekoitus takaisin pakkaan
     //Ota vastaan pakka array ja toinen array jonka kortit halutaan siirtää
     //Looppaa kaikki kortit ja siirrä ne pakkaan
-    public static void SiirraKortitPakkaan(ArrayList<Kortti> kortitPakka, ArrayList<Kortti> kortitJotkaSiirretaan) {
+    public static void SiirraKortitToiseenKasaan(ArrayList<Kortti> kortitTarget, ArrayList<Kortti> kortitSource) {
         //Sekoitetaan kortit takaisin pakkaan
-        while (kortitJotkaSiirretaan.size() > 0) {
+        while (kortitSource.size() > 0) {
             //Siirrä nostettu kortti käsikortteihin
-            kortitPakka.add(kortitJotkaSiirretaan.get(0));
+            kortitTarget.add(kortitSource.get(0));
             //Poista kortti pakasta
-            kortitJotkaSiirretaan.remove(0);
+            kortitSource.remove(0);
         }
     }
     

@@ -1,3 +1,4 @@
+//Onko tarpeellinen jos näitä asioita voi säilyttää peli ikkunan kentissä
 //Peliautomaatti (Olio)
   //Panos
     //0.20 default

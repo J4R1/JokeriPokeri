@@ -16,8 +16,9 @@ public class Voitontarkistus {
     final int KERROIN_KAKSI_PARIA = 2;
     final int KERROIN_EI_VOITTOA = 0;
 
-    //Ota vastaan käsikortit array, ja säilytettävien korttien array
-    public static void LukitseVoitot(ArrayList<Kortti> kortitKasi, Boolean[] bSailytaKortit) {
+    //Ota vastaan käsikortit array
+    //Jokin osuva nimi funktiolle, alla esimerkki
+    public static void LukitseVoitot(ArrayList<Kortti> kortitKasi) {
         //Tässä voisi olla muuttujina esim.
         //boolean suora, vari, tayskasi, kolmoset, neloset, viitoset;
         //int pari;
@@ -36,8 +37,7 @@ public class Voitontarkistus {
         
         //Esim. Selvitä kaikki booleanit ja parien määrät ja lopuksi valitse arvokkain voitto
         
-        //Aseta bSailytaKortit arrayhin säilytettävät kortit 
-            //En tiedä onko pakollista!!!
+        //Aseta säilytettävät kortit 
             //Sitten kun Jari selvittää peli ikkunan niin ton kortin säilytyksen
             //voi suoraan ruksata kortin checkboxiin
         

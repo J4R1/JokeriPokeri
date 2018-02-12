@@ -17,3 +17,5 @@ ToDo:
 -Pelikone.java
 
 -Visuaalinen puoli (Jari)
+
+-Tulosten merkitseminen lokiin

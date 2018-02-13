@@ -23,8 +23,8 @@ public class Voitontarkistus {
         //boolean suora, vari, tayskasi, kolmoset, neloset, viitoset;
         //int pari;
         
-        //Korttipakan looppaus
-        //for (Kortti kortti : kortitPakka) {
+        //Käsikorttien looppaus
+        //for (Kortti kortti : kortitKasi) {
         
         //Jokeri kortti on asetettu nollakortiksi
             //Kortti.dArvo = 0;
@@ -40,7 +40,7 @@ public class Voitontarkistus {
         //Aseta säilytettävät kortit 
             //Sitten kun Jari selvittää peli ikkunan niin ton kortin säilytyksen
             //voi suoraan ruksata kortin checkboxiin
-        
+                //jCheckBox1.setSelected(true);
     }
     
     //Voitontarkistus (Funktiot)

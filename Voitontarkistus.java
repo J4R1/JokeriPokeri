@@ -36,9 +36,11 @@ public class Voitontarkistus {
             //tällöin käsikorttien järjestys ei muutu
             //ks. Multidimensional array
                 //int[][] aryNumbers = new int[5][3]; //Viisi riviä, 3 saraketta
-                //aryNumbers[0][0] //Esim. Ensimmäisen kortin positio
+                //aryNumbers[0][0] //Esim. Ensimmäisen kortin positio kädessä
                 //aryNumbers[0][1] //Esim. Ensimmäisen kortin arvo
                 //aryNumbers[0][2] //Esim. Ensimmäisen kortin maa
+                //aryNumbers[1][0] //Esim. Toisen kortin positio kädessä
+                //aryNumbers[1][1] //Esim. Toisen kortin arvo jne...
                 
         //Esim. Selvitä kaikki booleanit ja parien määrät ja lopuksi valitse arvokkain voitto
         

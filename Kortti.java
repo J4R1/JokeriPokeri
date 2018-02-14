@@ -1,16 +1,12 @@
 package oliot_projekti;
 
 public class Kortti {
+    
     //Olion muuttujat
     int ID, iKortinArvo, iKortinMaa;
     boolean bJokeri = false; //Onko tarpeellinen?
     
-    public String toString() {
-        //Metodin kannattaa nyt palauttaa merkkijono: etunimi + ” ” + sukunimi
-        return this.getKorttiMaa() + " " + this.getKorttiNimi();
-    }
-    
-    //Tavallisen kortin luominen
+    //Kortin luominen
     public Kortti(int iIndex, int iArvo, int iMaa, boolean bOnkoJokeri) {
         this.ID = iIndex;
         this.iKortinArvo = iArvo;
@@ -18,7 +14,21 @@ public class Kortti {
         this.bJokeri = bOnkoJokeri;
     }
     
+    //Ilmeisesti kortitPakka.get(index) lukee return arvon tästä, 
+    //jos tähän tullaan System.out.print komennolla, tai luultavasti
+    //millä tahansa muulla string esittämis komennolla.
+    //Jos tätä ei ole asetettu niin print tekstissä näkyy jotain ihan kummallista.
+    public String toString() {
+        //Palauta kortin "nimi"
+        //Esim. Pata Kungingas, Hertta Ässä, Risti 7
+        return this.getKorttiMaa() + " " + this.getKorttiNimi();
+    }
+    
     //Getterit
+    public boolean getOnkoJokeri() {
+        return this.bJokeri;
+    }
+    
     public String getKorttiNimi() {
         switch (this.iKortinArvo) {
             case 0:
@@ -40,7 +50,6 @@ public class Kortti {
                 //Palautetaan numeroarvo tekstimuodossa
                 return new Integer(iKortinArvo).toString();
         }
-        
     }
     
     public String getKorttiMaa() {
@@ -68,4 +77,13 @@ public class Kortti {
             return "Musta";
         }    
     }
+
+    public int getiKortinArvo() {
+        return iKortinArvo;
+    }
+
+    public int getiKortinMaa() {
+        return iKortinMaa;
+    }
+    
 }

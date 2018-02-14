@@ -34,7 +34,8 @@ public class Voitontarkistus {
         //Voittojen selvitykseen olisi ehkä helpointa siirtää käsikortit kasvavaan järjestykseen
             //Varmaan kannattaisi tehdä kopio käsikorteista uuteen kortti arrayhin (tai ihan long array!)
             //tällöin käsikorttien järjestys ei muutu
-        
+            //ks. Multidimensional array
+            
         //Esim. Selvitä kaikki booleanit ja parien määrät ja lopuksi valitse arvokkain voitto
         
         //Aseta säilytettävät kortit 

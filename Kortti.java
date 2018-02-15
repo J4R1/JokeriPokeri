@@ -1,9 +1,12 @@
 package oliot_projekti;
 
+import java.awt.Color;
+
 public class Kortti {
     
     //Olion muuttujat
-    int ID, iKortinArvo, iKortinMaa;
+    int ID; //Onko tarpeellinen?
+    int iKortinArvo, iKortinMaa;
     boolean bJokeri = false; //Onko tarpeellinen?
     
     //Kortin luominen
@@ -28,7 +31,7 @@ public class Kortti {
     public boolean getOnkoJokeri() {
         return this.bJokeri;
     }
-    
+    //Palauttaa kuvakorteille kirjaimen numeron sijasta
     public String getKorttiNimi() {
         switch (this.iKortinArvo) {
             case 0:
@@ -51,33 +54,40 @@ public class Kortti {
                 return new Integer(iKortinArvo).toString();
         }
     }
-    
+    //Palauttaa symbolin joka vastaa haluttua maata
+    //HUOM vaatii oikean fontin toimiakseen
     public String getKorttiMaa() {
         switch (this.iKortinMaa) {
             case 0:
-                return "Joker";
+                //Jokeri
+                return "";
             case 1:
-                return "Hertta";
+                //Hertta
+                return "\u2665";
             case 2:
-                return "Ruutu";
+                //Ruutu
+                return "\u2666";
             case 3:
-                return "Pata";
+                //Pata
+                return "\u2660";
             default:
-                return "Risti";    
+                //Risti
+                return "\u2663";    
         }
     }
-    
-    public String getKorttiVari() {
+    //Palauttaa Color arvon esim setForeground käskyä varten
+    public Color getKorttiVari() {
         if (this.iKortinMaa == 0) {
-            return "Joker";
+            //Jokeri
+            return Color.black;
         } else if (this.iKortinMaa == 1 || this.iKortinMaa == 2) {
-            return "Punainen";
+            //Hertta, Ruutu
+            return Color.red;
         } else {
-            //Jätkä
-            return "Musta";
-        }    
+            //Pata, Risti
+            return Color.black;
+        }
     }
-
     public int getiKortinArvo() {
         return iKortinArvo;
     }

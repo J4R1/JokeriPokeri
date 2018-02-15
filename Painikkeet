@@ -1,0 +1,75 @@
+	//[VOITONMAKSU]
+	if (iPelinvaihe == 1) {
+		//Maksa voitot kolikoina
+	}else if (iPelinvaihe == 3) {
+		//Siirrä voitot rahamäärään
+        //Jatka vaiheeseen [1.]
+	} else if (iPelinvaihe == 5) {
+		//Siirrä voitot pelikoneen rahamäärään
+		//Jatka vaiheeseen [1.]
+	} else {
+		//Älä tee mitään
+	}
+	
+	//[PANOS]
+	if (iPelinvaihe == 1) {
+		//Muuta panosta
+	} else {
+		//Älä tee mitään
+	}
+	
+	//[JAKO]
+	if (iPelinvaihe == 1) {
+		//Tarkista onko pelikoneessa rahaa
+			//Jaa käsikortit
+			//Tarkista voitot
+			//Lukitse voittokortit
+			//Jatka vaiheeseen [2.]
+	}else if (iPelinvaihe == 2) {
+		//Tarkista että edes yksi kortti on lukittu
+			//Siirrä kortteja pois joita ei ole lukittu
+			//Nosta uusia käsikortteja vanhojen tilalle
+			//Poista korttien lukitus
+			//Tarkista voitot
+				//Jos voitto niin 
+					//Jatka vaiheeseen [3.]
+				//Jos ei voittoa niin
+					//Sekoita kortit takaisin pakkaan
+					//Jatka vaiheeseen [1.]
+	} else {
+		//Älä tee mitään
+	}
+	
+	//[KORTIT 1-5]
+	if (iPelinvaihe == 2) {
+		//Lukitse kortti
+	} else {
+		//Älä tee mitään
+	}
+	
+	//[TUPLAA]
+	if (iPelinvaihe == 3) {
+		//Sekoita kortit takaisin pakkaan
+		//Jatka vaiheeseen [4.]
+	} else if (iPelinvaihe == 5) {
+		//Jatka vaiheeseen [4.]
+	} else
+		//Älä tee mitään
+	}
+	
+	//[SUURI]/[PIENI]
+	if (iPelinvaihe == 4) {
+		//Nosta yksi kortti
+		//Tarkista tuliko voittoa
+			//Jos voitto niin
+				//Tuplaa voitot
+				//Jatka vaiheeseen [5.]
+			//Jos tasapeli niin
+				//Siirrä voitot pelikoneen rahamäärään
+				//Jatka vaiheeseen [1.]
+			//Jos ei voittoa niin
+				//Sekoita kortti takaisin pakkaan
+				//Jatka vaiheeseen [1.]
+	} else {
+		//Älä tee mitään
+	}

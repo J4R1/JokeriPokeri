@@ -1,0 +1,52 @@
+//Jokeripokeri vaiheet:
+    //[1.]
+        //[VOITONMAKSU]
+            //Maksa voitot kolikoina
+        //[PANOS]
+            //Muuta panosta
+        //[JAKO]
+            //Tarkista onko pelikoneessa rahaa
+                //Jaa käsikortit
+                //Tarkista voitot
+                //Lukitse voittokortit
+                //Jatka vaiheeseen [2.]
+    //[2.]
+        //[KORTIT 1-5]
+            //Lukitse kortti
+        //[JAKO]
+            //Tarkista että edes yksi kortti on lukittu
+                //Siirrä kortteja pois joita ei ole lukittu
+                //Nosta uusia käsikortteja vanhojen tilalle
+                //Poista korttien lukitus
+                //Tarkista voitot
+                    //Jos voitto niin 
+                        //Jatka vaiheeseen [3.]
+                    //Jos ei voittoa niin
+                        //Sekoita kortit takaisin pakkaan
+                        //Jatka vaiheeseen [1.]
+    //[3.]
+	//[VOITONMAKSU]
+            //Siirrä voitot rahamäärään
+            //Jatka vaiheeseen [1.]
+        //[TUPLAA]
+            //Sekoita kortit takaisin pakkaan
+            //Jatka vaiheeseen [4.]
+    //[4.]
+        //[SUURI]/[PIENI]
+            //Nosta yksi kortti
+            //Tarkista tuliko voittoa
+                //Jos voitto niin
+                    //Tuplaa voitot
+                    //Jatka vaiheeseen [5.]
+                //Jos tasapeli niin
+                    //Siirrä voitot pelikoneen rahamäärään
+                    //Jatka vaiheeseen [1.]
+                //Jos ei voittoa niin
+                    //Sekoita kortti takaisin pakkaan
+                    //Jatka vaiheeseen [1.]
+    //[5.]
+        //[VOITONMAKSU]
+            //Siirrä voitot pelikoneen rahamäärään
+            //Jatka vaiheeseen [1.]
+        //[TUPLAA]
+            //Jatka vaiheeseen [4.]

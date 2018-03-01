@@ -174,15 +174,129 @@ public class Gui_m extends javax.swing.JFrame {
         jButton2.setBackground(new java.awt.Color(255, 153, 51));
         jButton2.setText("Tuplaa");
         jButton2.setPreferredSize(new java.awt.Dimension(100, 50));
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
 
+
+            }
+
+            private void jButton2ActionPerformed(ActionEvent evt) {
+// tähän kömento
+            }
+
+
+
+
+        });
+        
+        
         jButton3.setBackground(new java.awt.Color(0, 204, 255));
         jButton3.setText("Panos");
         jButton3.setPreferredSize(new java.awt.Dimension(100, 50));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
 
+
+            }
+
+            private void jButton3ActionPerformed(ActionEvent evt) {
+// tähän kömento
+            }
+
+        });
         jButton4.setBackground(new java.awt.Color(0, 255, 51));
         jButton4.setText("Jaa");
         jButton4.setPreferredSize(new java.awt.Dimension(100, 50));
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            @Override
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
 
+
+            }
+
+            private void jButton4ActionPerformed(ActionEvent evt) {
+            //        Random randomNumber= rand;
+        // TODO add your handling code here:
+        
+        //jLabel muuttuja
+        javax.swing.JLabel targetLabel;
+        //tee tähän yleispätevä image kenttä esim im
+        
+            Image imTemp; 
+        int iKorttiPositio = 1;
+        
+        for (Kortti kortti : kortitKasi) {
+            //Mitä labelia muutetaan
+            switch (iKorttiPositio) {
+                case 1:
+                    targetLabel = jLabel1;
+                    break;
+                case 2:
+                    targetLabel = jLabel2;
+                    break;
+                case 3:
+                    targetLabel = jLabel3;
+                    break;
+                case 4:
+                    targetLabel = jLabel4;
+                    break;
+                default:
+                    targetLabel = jLabel5;
+                    break;
+                    
+            }
+
+            //Mikä kortin tiedostonimi on?
+            String sKuvannimi = kortti.getKorttiTiedostoNimi();
+           
+
+            
+            //targetLabelissä on se haluttu label
+            Image im=new ImageIcon(this.getClass().getResource("/Kuvat/"+sKuvannimi+".png")).getImage();
+            ImageIcon kortinKuva = new ImageIcon(im);
+            
+            targetLabel.setIcon(kortinKuva);
+
+            iKorttiPositio++;
+
+
+        }
+            KorttiKasittely.SiirraKortitToiseenKasaan(kortitPakka, kortitKasi);
+
+        while (kortitKasi.size() < 5) {
+            //Ilmoita funktiolle mihin positioon nostettu kortti laitetaan
+            //Tämä sen vuoksi että jäljelle jäävät kortit eivät siirry
+            KorttiKasittely.NostaKortti(kortitPakka, kortitKasi);
+        }
+
+//    Image im1=new ImageIcon(this.getClass().getResource("/Kuvat/.png")).getImage();
+//    ImageIcon kuva1 = new ImageIcon(im1);
+//    Image im2=new ImageIcon(this.getClass().getResource("/Kuvat/ace_of_clubs.png")).getImage();
+//    ImageIcon kuva2 = new ImageIcon(im2);
+//    Image im3=new ImageIcon(this.getClass().getResource("/Kuvat/3_of_clubs.png")).getImage();   
+//    ImageIcon kuva3 = new ImageIcon(im3);
+//    Image im4=new ImageIcon(this.getClass().getResource("/Kuvat/3_of_clubs.png")).getImage();
+//    ImageIcon kuva4 = new ImageIcon(im4);    
+//    Image im5=new ImageIcon(this.getClass().getResource("/Kuvat/4_of_clubs.png")).getImage();
+////    ImageIcon kuva5 = new ImageIcon(im5);
+//    jLabel1.setIcon(kuva);
+//    jLabel2.setIcon(kuva);
+//    jLabel3.setIcon(kuva);
+//    jLabel4.setIcon(kuva);
+//    jLabel5.setIcon(kuva);
+
+            }
+
+        });
+        
+        
+        
+        
         jLabel6.setText("Tili: ");
 
         jLabel7.setText("Voitot:");
@@ -277,75 +391,6 @@ public class Gui_m extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-//        Random randomNumber= rand;
-        // TODO add your handling code here:
-        
-        //jLabel muuttuja
-        javax.swing.JLabel targetLabel;
-        //tee tähän yleispätevä image kenttä esim im
-        
-            Image imTemp; 
-        int iKorttiPositio = 1;
-        
-        for (Kortti kortti : kortitKasi) {
-            //Mitä labelia muutetaan
-            switch (iKorttiPositio) {
-                case 1:
-                    targetLabel = jLabel1;
-                    break;
-                case 2:
-                    targetLabel = jLabel2;
-                    break;
-                case 3:
-                    targetLabel = jLabel3;
-                    break;
-                case 4:
-                    targetLabel = jLabel4;
-                    break;
-                default:
-                    targetLabel = jLabel5;
-                    break;
-                    
-            }
-
-            //Mikä kortin tiedostonimi on?
-            String sKuvannimi = kortti.getKorttiTiedostoNimi();
-           
-
-            
-            //targetLabelissä on se haluttu label
-            Image im=new ImageIcon(this.getClass().getResource("/Kuvat/"+sKuvannimi+".png")).getImage();
-            ImageIcon kortinKuva = new ImageIcon(im);
-            
-            targetLabel.setIcon(kortinKuva);
-
-            iKorttiPositio++;
-
-
-        }
-            KorttiKasittely.SiirraKortitToiseenKasaan(kortitPakka, kortitKasi);
-
-        while (kortitKasi.size() < 5) {
-            //Ilmoita funktiolle mihin positioon nostettu kortti laitetaan
-            //Tämä sen vuoksi että jäljelle jäävät kortit eivät siirry
-            KorttiKasittely.NostaKortti(kortitPakka, kortitKasi);
-        }
-
-//    Image im1=new ImageIcon(this.getClass().getResource("/Kuvat/.png")).getImage();
-//    ImageIcon kuva1 = new ImageIcon(im1);
-//    Image im2=new ImageIcon(this.getClass().getResource("/Kuvat/ace_of_clubs.png")).getImage();
-//    ImageIcon kuva2 = new ImageIcon(im2);
-//    Image im3=new ImageIcon(this.getClass().getResource("/Kuvat/3_of_clubs.png")).getImage();   
-//    ImageIcon kuva3 = new ImageIcon(im3);
-//    Image im4=new ImageIcon(this.getClass().getResource("/Kuvat/3_of_clubs.png")).getImage();
-//    ImageIcon kuva4 = new ImageIcon(im4);    
-//    Image im5=new ImageIcon(this.getClass().getResource("/Kuvat/4_of_clubs.png")).getImage();
-////    ImageIcon kuva5 = new ImageIcon(im5);
-//    jLabel1.setIcon(kuva);
-//    jLabel2.setIcon(kuva);
-//    jLabel3.setIcon(kuva);
-//    jLabel4.setIcon(kuva);
-//    jLabel5.setIcon(kuva);
 
 }
                                             

@@ -13,6 +13,8 @@ public class Pelikone {
         //Voitot (double)
         double dVoitot = 0;
             //Default 0
+        int iPelivaihe = 1;
+        
         public Pelikone() {
         }
         //Set panos
@@ -41,5 +43,11 @@ public class Pelikone {
             //Kutsu lompakko olion setteriä
             targetLompakko.LisaaRahamaara(this.dRahamaara);
             this.dRahamaara = 0;
+        }
+        public int getiPelivaihe() {
+            return iPelivaihe;
+        }
+        public void setiPelivaihe(int iAsetaVaihe) {
+            this.iPelivaihe = iAsetaVaihe;
         }
 }

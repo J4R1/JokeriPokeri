@@ -96,4 +96,74 @@ public class Kortti {
         return iKortinMaa;
     }
     
+    public String getKorttiTiedostoNimi(){
+        String sTiedostoNimi = "";
+        
+        switch (iKortinArvo) {
+            case 1:
+                sTiedostoNimi= "ace_";
+                break;
+            case 2:
+                sTiedostoNimi=  "2_";
+                break;
+            case 3:
+                sTiedostoNimi=  "3_";
+                break;
+            case 4:
+                sTiedostoNimi=  "4_";
+                break;
+            case 5:
+                sTiedostoNimi=  "5_";
+                break;
+            case 6:
+                sTiedostoNimi=  "6_";
+                break;
+            case 7:
+                sTiedostoNimi=  "7_";
+                break;
+            case 8:
+                sTiedostoNimi=  "8_";
+                break;
+            case 9:
+                sTiedostoNimi=  "9_";
+                break;
+            case 10:
+                sTiedostoNimi=  "10_";
+                break;
+            case 11:
+                sTiedostoNimi=  "jack_";
+                break;
+            case 12:
+                sTiedostoNimi=  "queen_";
+                break;
+            case 13:
+                sTiedostoNimi=  "king_";
+                break;
+            default:
+                sTiedostoNimi="";
+                break;
+        }
+        
+        switch (iKortinMaa) {
+            case 1:
+                sTiedostoNimi=sTiedostoNimi +"of_hearts";
+                break;
+            case 2:
+                sTiedostoNimi=sTiedostoNimi + "of_diamonds";
+                break;
+            case 3:
+                sTiedostoNimi=sTiedostoNimi + "of_spades";
+                break;
+            case 4:
+                sTiedostoNimi=sTiedostoNimi + "of_clubs";
+                break;
+            default:
+                sTiedostoNimi=sTiedostoNimi + "red_joker";
+                break;
+        }
+        
+        //System.out.println(sTiedostoNimi);
+        
+        return sTiedostoNimi ;   
+    }     
 }

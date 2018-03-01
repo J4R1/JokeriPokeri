@@ -1,0 +1,156 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package jokeripokeri;
+
+/**
+ *
+ * @author Jari
+ */
+import java.awt.Color;
+
+public class Kortti {
+
+    
+    //Olion muuttujat
+    int ID; //Onko tarpeellinen?
+    int iKortinArvo, iKortinMaa;
+    boolean bJokeri = false; //Onko tarpeellinen?
+    
+    //Kortin luominen
+    public Kortti(int iIndex, int iArvo, int iMaa, boolean bOnkoJokeri) {
+        this.ID = iIndex;
+        this.iKortinArvo = iArvo;
+        this.iKortinMaa = iMaa;
+        this.bJokeri = bOnkoJokeri;
+    }
+    
+    //Ilmeisesti kortitPakka.get(index) lukee return arvon tästä, 
+    //jos tähän tullaan System.out.print komennolla, tai luultavasti
+    //millä tahansa muulla string esittämis komennolla.
+    //Jos tätä ei ole asetettu niin print tekstissä näkyy jotain ihan kummallista.
+    public String toString() {
+        //Palauta kortin "nimi"
+        //Esim. Pata Kungingas, Hertta Ässä, Risti 7
+        return this.getKorttiMaa() + " " + this.getKorttiNimi();
+    }
+    
+    //Getterit
+    public boolean getOnkoJokeri() {
+        return this.bJokeri;
+    }
+    //Palauttaa kuvakorteille kirjaimen numeron sijasta
+    public String getKorttiNimi() {
+        switch (this.iKortinArvo) {
+            case 0:
+                //Jokeri
+                return "Joker";
+            case 1:
+                //Ässä
+                return "A";
+            case 11:
+                //Jätkä
+                return "J";
+            case 12:
+                //Kuningatar
+                return "Q";
+            case 13:
+                //Kuningas
+                return "K";
+            default:
+                //Palautetaan numeroarvo tekstimuodossa
+                return new Integer(iKortinArvo).toString();
+        }
+    }
+    //Palauttaa symbolin joka vastaa haluttua maata
+    //HUOM vaatii oikean fontin toimiakseen
+    public String getKorttiMaa() {
+        switch (this.iKortinMaa) {
+            case 0:
+                //Jokeri
+                return "";
+            case 1:
+                //Hertta
+                return "\u2665";
+            case 2:
+                //Ruutu
+                return "\u2666";
+            case 3:
+                //Pata
+                return "\u2660";
+            default:
+                //Risti
+                return "\u2663";    
+        }
+    }
+    //Palauttaa Color arvon esim setForeground käskyä varten
+    public Color getKorttiVari() {
+        if (this.iKortinMaa == 0) {
+            //Jokeri
+            return Color.black;
+        } else if (this.iKortinMaa == 1 || this.iKortinMaa == 2) {
+            //Hertta, Ruutu
+            return Color.red;
+        } else {
+            //Pata, Risti
+            return Color.black;
+        }
+    }
+        public int getiKortinArvo() {
+        return iKortinArvo;
+    }
+
+    public int getiKortinMaa() {
+        return iKortinMaa;
+    }
+    public String getKorttiTiedostoNimi(){
+        String sTiedostoNimi = "";
+
+        if ( iKortinArvo==1){
+        sTiedostoNimi= "ace_";}
+        else if ( iKortinArvo==2){
+        sTiedostoNimi=  "2_";}
+        else if ( iKortinArvo==3){        
+        sTiedostoNimi=  "3_";}
+        else if ( iKortinArvo==4){        
+        sTiedostoNimi=  "4_";}
+        else if ( iKortinArvo==5){        
+        sTiedostoNimi=  "5_";}
+        else if ( iKortinArvo==6){        
+        sTiedostoNimi=  "6_";}
+        else if ( iKortinArvo==7){        
+        sTiedostoNimi=  "7_";}
+        else if ( iKortinArvo==8){        
+        sTiedostoNimi=  "8_";}
+        else if ( iKortinArvo==9){        
+        sTiedostoNimi=  "9_";}
+        else if ( iKortinArvo==10){        
+        sTiedostoNimi=  "10_";}
+        else if ( iKortinArvo==11){        
+        sTiedostoNimi=  "jack_";}
+        else if ( iKortinArvo==12){        
+        sTiedostoNimi=  "queen_";}
+        else if(iKortinArvo==13)        {
+        sTiedostoNimi=  "king_";}
+        else {sTiedostoNimi="";
+//                System.out.println("udsdsnvbdsivbsd");
+        }
+        
+        if (iKortinMaa == 1)
+           sTiedostoNimi=sTiedostoNimi +"of_hearts";
+        else if (iKortinMaa == 2)
+            {   sTiedostoNimi=sTiedostoNimi + "of_diamonds";}        
+        else if (iKortinMaa == 3)
+            {   sTiedostoNimi=sTiedostoNimi + "of_spades";}        
+        else if (iKortinMaa == 4)
+            {   sTiedostoNimi=sTiedostoNimi + "of_clubs";}
+        else    sTiedostoNimi=sTiedostoNimi + "red_joker";
+                 System.out.println(sTiedostoNimi);
+
+       return sTiedostoNimi ;   
+    }        
+    }
+    
+    

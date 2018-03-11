@@ -20,20 +20,10 @@ ToDo luokat:
 
 -Pelikone.java (Valmis)
 
-
-
 ToDo funktiot:
-
--Tarkistus onko rahaa
 
 -Tarkistus että edes yksi kortti on lukittu
 
 -Yleinen koodi kortin lukitsemiseen
 
 -Koodi joka poistaa lukituksen kaikista korteista
-
--Yleinen koodi tuplaukselle
-
--Käynnistyessä hae rahat lokitiedostosta
-
--Tarkistus onko pelikoneessa vielä rahaa

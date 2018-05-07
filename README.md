@@ -1,3 +1,6 @@
+![Screenshot](jokeripokeri_drawn.PNG)
+
+
 # JokeriPokeri
 //Luokat:
   //JokeriPokeri

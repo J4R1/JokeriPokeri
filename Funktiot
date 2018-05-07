@@ -1,7 +1,11 @@
-package oliot_projekti;
+/**
+ *
+ * @author Jari
+ */
+package jokeripokeri;
 
-import java.util.ArrayList;
 import java.awt.Image;
+import java.util.*;
 import javax.swing.*;
 
 public class Funktiot {
@@ -80,7 +84,8 @@ public class Funktiot {
 //        jLabel_Temp.setIcon(kortinKuva);
 //    }
     //Kortin lukitseminen/lukituksen vaihtaminen
-    public static void KorttiVaihdaLukitusta(javax.swing.JCheckBox jCheckbox_Temp, ArrayList<Kortti> kasi) {
+
+        public static void KorttiVaihdaLukitusta(javax.swing.JCheckBox jCheckbox_Temp, ArrayList<Kortti> kasi) {
         if (jCheckbox_Temp.isSelected()) {
             jCheckbox_Temp.setSelected(false);
             VoitonTarkistus.Potentiaaliset(kasi);
@@ -90,17 +95,7 @@ public class Funktiot {
         };
     }
     //Kortin lukituksen asemmatinen halutuksi
-    public static void KortitAsetaLukitusPois(ArrayList<Kortti> kasi) {
-        Gui_Main.jCheckBox5.setSelected(false);
-        Gui_Main.jCheckBox4.setSelected(false);
-        Gui_Main.jCheckBox3.setSelected(false);
-        Gui_Main.jCheckBox2.setSelected(false);
-        Gui_Main.jCheckBox1.setSelected(false);
-        //Tähän kutsu potentiaalivoittojen laskemiselle
-        VoitonTarkistus.Potentiaaliset(kasi);
-    }
-    //Kortin lukituksen asemmatinen halutuksi
-    public static void KortitAsetaLukitus(int iIndex, boolean bTemp, ArrayList<Kortti> kasi) {
+    public static void KortitAsetaLukitus(int iIndex, boolean bTemp) {
         javax.swing.JCheckBox jCheckbox_Temp;
                 
         switch (iIndex) {
@@ -121,8 +116,6 @@ public class Funktiot {
                 break;
         }
         jCheckbox_Temp.setSelected(bTemp);
-        //Tähän kutsu potentiaalivoittojen laskemiselle
-        VoitonTarkistus.Potentiaaliset(kasi);
     }
     //Lukitse ne kortit jotka VoitonTarkistus.LukitseVoitot koodi on merkinnyt
     public static void LukitseVoittokortit(String sVoittokortit) {

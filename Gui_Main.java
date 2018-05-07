@@ -34,7 +34,6 @@ public class Gui_Main extends JFrame {
     private void initComponents() {
         //<editor-fold defaultstate="collapsed" desc="Labelien ja painikkeiden sanakirja">
         /**
-         *
          * jButton1; Voitonmaksu 
          * jButton2; Tuplaa 
          * jButton3; Panos 
